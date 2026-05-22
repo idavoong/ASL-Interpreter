@@ -2,8 +2,8 @@ import os
 import cv2
 
 # Define directories
-dataset_dir = 'SignAlphaSet/SignAlphaSet' # Directory containing the original dataset
-processed_dir = 'cropped_dataset' # Directory to save cropped images
+dataset_dir = 'datasets/SignAlphaSet' # Directory containing the original dataset
+processed_dir = 'datasets/cropped_dataset' # Directory to save cropped images
 
 # Create processed dataset directory if it doesn't exist
 if not os.path.exists(processed_dir):
@@ -43,7 +43,8 @@ def crop_images():
                 processed_img_path = os.path.join(processed_letter_dir, img_name)
 
                 cv2.imwrite(processed_img_path, cropped_img)
-                print("Cropping complete. Cropped images saved in:", processed_dir)
+
+    print("Cropping complete. Cropped images saved in:", processed_dir)
 
 # Run the crop function
 crop_images()

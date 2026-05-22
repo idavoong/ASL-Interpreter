@@ -3,7 +3,7 @@ from torchvision import datasets, transforms
 from torch.utils.data import DataLoader, random_split
 
 # Configuration
-DATA_DIR = "SignAlphaSet/SignAlphaSet"
+DATA_DIR = "datasets/SignAlphaSet"
 BATCH_SIZE = 32
 IMAGE_SIZE = (64, 64) # Resize images as needed
 

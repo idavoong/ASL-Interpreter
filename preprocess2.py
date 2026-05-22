@@ -4,8 +4,10 @@ from PIL import Image
 import numpy as np
 
 # Directories
-input_dir = "cropped_dataset" # Folder with cropped images
-output_dir = "SignImages" # Folder to save resized and normalized images
+# input_dir = "datasets/cropped_dataset" # Folder with cropped images
+# output_dir = "datasets/SignImages" # Folder to save resized and normalized images
+input_dir = "datasets/SignAlphaSet"
+output_dir = "datasets/SignImages"
 
 # Parameters
 target_size = (224, 224) # Use 224x224 for higher detail
@@ -45,7 +47,7 @@ def split_dataset(input_dir, output_dir):
                 os.makedirs(os.path.join(test_dir, label), exist_ok=True)
                 os.rename(os.path.join(label_dir, img), os.path.join(test_dir, label, img))
 
-            print("Dataset split into train, validation, and test sets.")
+    print("Dataset split into train, validation, and test sets.")
 
 # Data Augmentation
 def create_generators(train_dir, val_dir, test_dir):
