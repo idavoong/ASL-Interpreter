@@ -6,8 +6,8 @@ import numpy as np
 # Directories
 # input_dir = "datasets/cropped_dataset" # Folder with cropped images
 # output_dir = "datasets/SignImages" # Folder to save resized and normalized images
-input_dir = "datasets/SignAlphaSet"
-output_dir = "datasets/SignImages"
+input_dir = "datasets/ASL_dynamic"
+output_dir = "datasets/SignVideos"
 
 # Parameters
 target_size = (224, 224) # Use 224x224 for higher detail
